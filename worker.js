@@ -68,7 +68,7 @@ async function fetchHandler(event) {
     const dateParam = url.searchParams.get("date");
     const date = formatDateTime(dateParam ? dateParam.replace(/\D+/g, '') : '').date;
 
-    if (parseInt(date.replace(/-/g, '')) >= 20240214) {
+    if (parseInt(date.replace(/-/g, '')) >= 20240531) {
         return diypHandle(channel, date, request);
     } else {
         return makeRes(JSON.stringify({
